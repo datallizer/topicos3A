@@ -5,72 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-7 m-2 bg-primary p-5">
-                <div class="accordion">
-                    <details class="accordion-item" name="accordionExample" open>
-                        <summary class="accordion-header">
-                            Accordion Item #1
-                            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m2 5 6 6 6-6" />
-                            </svg>
-                        </summary>
-                        <div class="accordion-body">
-                            <strong>This is the first item’s accordion body.</strong> It is shown by default because the
-                            <code>open</code> attribute is present. The native <code>&lt;details&gt;</code> element
-                            handles all the show/hide logic without any JavaScript. You can put any HTML content within
-                            the <code>.accordion-body</code>.
-                        </div>
-                    </details>
-                    <details class="accordion-item" name="accordionExample">
-                        <summary class="accordion-header">
-                            Accordion Item #2
-                            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m2 5 6 6 6-6" />
-                            </svg>
-                        </summary>
-                        <div class="accordion-body">
-                            <strong>This is the second item’s accordion body.</strong> The <code>name</code> attribute
-                            groups this with other accordion items. When you open this item, any other open item in the
-                            same group will close automatically.
-                        </div>
-                    </details>
-                    <details class="accordion-item" name="accordionExample">
-                        <summary class="accordion-header">
-                            Accordion Item #3
-                            <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m2 5 6 6 6-6" />
-                            </svg>
-                        </summary>
-                        <div class="accordion-body">
-                            <strong>This is the third item’s accordion body.</strong> This exclusive accordion behavior
-                            is built into the browser—no Bootstrap JavaScript required. Just use matching
-                            <code>name</code> attributes on your <code>&lt;details&gt;</code> elements.
-                        </div>
-                    </details>
-                </div>
-                <div class="col-5"> 
-                    <h1> Welcome to the main content area</h1>
-                </div>
-                <img class="avatar-img" src="https://github.com/mdo.png" alt="mdo" width="50" height="50">
+    <!-- 1. Cambio de bg-dark a bg-primary para la barra azul -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MiProyecto</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 m-2 bg-primary p-5">
+                <h1 class="text-center text-primary fw-bold mt-3">Bienvenido a nuestra plataforma</h1>
+                <p class="text-center text-muted lead">Explora los componentes de Bootstrap paso a paso.</p>
+                <div class="alert alert-info alert-dismissible fade show mt-4" role="alert">
+                    <strong>¡Hola!</strong> Esta es una alerta interactiva. Puedes cerrarla dando clic en la "X".
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+               
+        <h3 id="servicios" class="mt-5 mb-4 border-bottom pb-2">Nuestros Servicios</h3>
+        <div class="row">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Servicio 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollo Web</h5>
+                        <p class="card-text">Creación de sitios web responsivos utilizando HTML, CSS y frameworks modernos.</p>
+                        <a href="#" class="btn btn-primary w-100">Saber más</a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-success">
+                    <div class="card-header bg-success text-white">Destacado</div>
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Aplicaciones Móviles</h5>
+                        <p class="card-text">Diseño y desarrollo de apps multiplataforma para Android e iOS.</p>
+                        <button class="btn btn-outline-success">Contactar</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm bg-light">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Consultoría TI</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Optimización de procesos</h6>
+                        <p class="card-text">Mejoramos la infraestructura tecnológica de tu empresa.</p>
+                        <a href="#" class="btn btn-dark rounded-pill px-4">Agendar cita</a>
+                    </div>
+                </div>
+            </div>
 
-
+            <!-- 3. Tarjeta 4 agregada. Automáticamente bajará a la siguiente fila -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-info">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-info">Análisis de Datos</h5>
+                        <p class="card-text">Convertimos tus datos en información valiosa para la toma de decisiones.</p>
+                        <a href="#" class="btn btn-outline-info w-100">Ver planes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center mt-5 mb-5">
+            <div class="col-lg-6 col-md-8">
+                <div class="card p-4 border-0 shadow">
+                    <h4 class="mb-4">Déjanos un mensaje</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com">
+                            <div class="form-text">Nunca compartiremos tu correo con nadie más.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Tu mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4"></textarea>
+                        </div>
+                        <!-- 2. Agregada la clase w-100 al botón para ocupar todo el ancho -->
+                        <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
