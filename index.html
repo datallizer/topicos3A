@@ -5,13 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <!-- Paso 1 y Reto 1: Barra de navegación superior con fondo azul (bg-primary) -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">MiProyecto</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
@@ -30,101 +29,53 @@
             </div>
         </nav>
 
-        <div class="container-fluid">
-            <!-- Primera fila: Encabezado, Alerta y Carrusel -->
-            <div class="row">
-                <div class="col-6 m-2 bg-primary p-2">
-                    <!-- Paso 2: Encabezado y Alerta de Bienvenida -->
-                    <h1 class="text-center text-primary fw-bold mt-3">Bienvenido a nuestra plataforma</h1>
-                    <p class="text-center text-muted lead">Explora los componentes de Bootstrap paso a paso.</p>
-                    <div class="alert alert-info alert-dismissible fade show mt-4" role="alert">
-                        <strong>¡Hola!</strong> Esta es una alerta interactiva. Puedes cerrarla dando clic en la "X".
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="col-5 m-2 bg-secondary">
-                    <div id="carouselStacked" class="carousel slide">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0">Top controls</h5>
-                            <div>
-                                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStacked" data-bs-slide="prev">
-                                    <span class="carousel-icon-prev" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselStacked" data-bs-slide="next">
-                                    <span class="carousel-icon-next" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="carousel-inner rounded-5">
-                            <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+            <h1 class="text-center text-dark fw-bold mt-3">Bienvenido a nuestra plataforma</h1>
+            <p class="text-center text-muted lead">Explora los componentes de Bootstrap paso a paso.</p>
+            <div class="alert alert-info alert-dismissible fade show mt-4" role="alert">
+                <strong>¡Hola!</strong> Esta es una alerta interactiva. Puedes cerrarla dando clic en la "X".
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
-            <!-- Paso 3: Catálogo con Tarjetas (Cards) y Reto 3 (Cuarta Tarjeta) -->
             <h3 id="servicios" class="mt-5 mb-4 border-bottom pb-2">Nuestros Servicios</h3>
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- Tarjeta 1 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 col-6">
                     <div class="card h-100 shadow-sm">
                         <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Servicio 1">
                         <div class="card-body">
                             <h5 class="card-title">Desarrollo Web</h5>
-                            <p class="card-text">Creación de sitios web responsivos utilizando HTML, CSS y frameworks modernos.</p>
+                            <p class="card-text text-center">Creación de sitios web responsivos utilizando HTML, CSS y frameworks modernos.</p>
                             <a href="#" class="btn btn-primary w-100">Saber más</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tarjeta 2 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 col-6">
                     <div class="card h-100 shadow-sm border-success">
                         <div class="card-header bg-success text-white">Destacado</div>
                         <div class="card-body">
                             <h5 class="card-title text-success">Aplicaciones Móviles</h5>
-                            <p class="card-text">Diseño y desarrollo de apps multiplataforma para Android e iOS.</p>
-                            <button class="btn btn-outline-success">Contactar</button>
+                            <p class="card-text text-center">Diseño y desarrollo de apps multiplataforma para Android e iOS.</p>
+                            <button class="btn btn-outline-success w-100">Contactar</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tarjeta 3 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 col-6">
                     <div class="card h-100 shadow-sm bg-light">
                         <div class="card-body text-center">
                             <h5 class="card-title">Consultoría TI</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Optimización de procesos</h6>
-                            <p class="card-text">Mejoramos la infraestructura tecnológica de tu empresa.</p>
-                            <a href="#" class="btn btn-dark rounded-pill px-4">Agendar cita</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 4 (Reto 3: Cuarta tarjeta añadida al catálogo) -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Servicio 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Soporte Técnico</h5>
-                            <p class="card-text">Asistencia y mantenimiento continuo para tus sistemas y plataformas digitales.</p>
-                            <a href="#" class="btn btn-primary w-100">Saber más</a>
+                            <p class="card-text text-center">Mejoramos la infraestructura tecnológica de tu empresa.</p>
+                            <a href="#" class="btn btn-primary rounded-pill px-4">Agendar cita</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Paso 4: Formulario de Contacto -->
             <div class="row justify-content-center mt-5 mb-5">
                 <div class="col-lg-6 col-md-8">
                     <div class="card p-4 border-0 shadow">
@@ -146,8 +97,7 @@
                                 <textarea class="form-control" id="mensaje" rows="4"></textarea>
                             </div>
 
-                            <!-- Reto 2: Botón que ocupa todo el ancho con w-100 -->
-                            <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
                         </form>
                     </div>
                 </div>
